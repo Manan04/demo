@@ -1,0 +1,18 @@
+<div class="pen-title">
+  <h1>Texas</h1><span>Login<i class='fa fa-paint-brush'></i> + <i class='fa fa-code'></i> by <a href='#'>Imaginology</a></span>
+</div>
+<!-- Form Module-->
+<div class="module form-module">
+  <div class="toggle"><i class="fa fa-times fa-pencil"></i>
+  </div>
+  <div class="form">
+    <h2>Login to your account</h2>
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value)" ngNativeValidate>
+      <input type="text" name="username" placeholder="Username" ngModel  required/>
+      <input type="password"  name="password" placeholder="Password" ngModel  required/>
+      <button>Login</button>
+    </form>
+
+  </div>
+</div>
+

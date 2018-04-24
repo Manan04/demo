@@ -1,0 +1,51 @@
+<link rel="stylesheet" type="text/css"  href="/assets/css/registerstyle.css">
+<form method="post" #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm.value)" >
+<div class="container">
+      <div class="row main">
+        <div class="panel-heading">
+                 <div class="panel-title text-center">
+                    <h1 class="title">Texas International College
+            <hr />
+            </h1>
+                    
+                  </div>
+              </div> 
+     
+        <div class="main-center">
+         <h1>REGISTRATION</h1>
+     <span>
+    <div class="radio-item">
+    <input type="radio"  name="userRole" value="admin" id="ritema" required=true   ngModel> 
+    <label for="ritema">Admin</label>
+</div>
+
+<div class="radio-item">
+    <input type="radio" name="userRole"  value="user" id="ritemb"  required=true  ngModel>
+    <label for="ritemb">User</label>
+</div>
+          </span>
+            <div>
+              <i class="fa fa-user"></i>
+                <input type="text"  class="form-control" placeholder="First Name" ngModel name="firstName" required  >
+                <i class="fa fa-user"></i>
+                 <input type="text" name="middleName" class="form-control" placeholder="Middle Name" ngModel required=true >
+         
+         <i class="fa fa-users fa"></i>
+               <input type="text" name="lastName" class="form-control" placeholder="Last Name" ngModel required=true >
+                
+                <i class="fa fa-envelope fa"></i>
+                 <input type="text" name="email" class="form-control" placeholder="Email" ngModel required=true >
+         
+         <i class="fa fa-lock fa-lg"></i>
+               <input type="password" name="password"  [(ngModel)]="pass" class="form-control" placeholder="Passsword" required=true  ngModel>
+                
+                <i class="fa fa-lock fa-lg"></i>
+                 <input type="password" name="retype_password" [(ngModel)]="retypepass"  class="form-control"  required=true placeholder="Re-type Your Passsword" ngModel>       
+           <button type="submit" class="btn-all">REGISTER</button>
+  
+
+          </div>
+        </div>
+      </div>
+    </div>
+</form>
